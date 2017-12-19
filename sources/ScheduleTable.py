@@ -49,10 +49,10 @@ class Table(wx.grid.GridTableBase):
         # 1行・2列目から開始，日付部分だけ取り出す
         for i in range(len(chars_data)):
             for j in range(1, len(chars_data[i])):
-                # カンマ数が2より多い場合
+                # カンマ数が2以上の場合
                 # ( カンマの位置情報が3つ以上格納されている )
                 # ≒日付，時刻，名前のセットがある
-                if int(len(indexes[i][j])) > 2:
+                if int(len(indexes[i][j])) >= 2:
                     # 日付の部分(最初のカンマまで)===============
                     for k in range(0, indexes[i][j][0]):
                         date_chars.append(chars_data[i][j][k])
