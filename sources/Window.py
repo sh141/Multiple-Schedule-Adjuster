@@ -205,7 +205,7 @@ class GUI(wx.Frame):
         self.assignedDays.SetHeaderAndData(header, OrganizedAssignDays)
         
         # 割当日程表の着色をリセット
-        maxRows = self.assignedDays.GetNumberRows()  # 割当日程表の行数
+        maxRows = self.assignedDays.GetNumberRows() + 1  # 割当日程表の行数
         maxCols = self.assignedDays.GetNumberCols()  # 割当日程表の列数
         for i in range(maxRows):
             for p in range(maxCols):
